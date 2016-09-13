@@ -1,0 +1,889 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>IOS 视频笔记 | 旺旺的Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="程序猿旺旺">
+    
+
+    
+    <meta name="description" content="命令行
+ls -l  列车当前目录下所有内容
+pwd 显示当前目录名称
+who 显示当前用户名
+clear 清屏
+mkdir 新建一个目录
+touch 新建一个文件
+open 打开一个文件
+
+UIView
+frame CGRect 控件的位置及大小
+bounds CGRect 以自己的左上为xy，所以 xy为0
+tag Integer类型 ，标记
+superView 父类
+subViews 所有子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IOS 视频笔记">
+<meta property="og:url" content="http://wangwanggame.com/2014/09/14/ios/IOS-视频笔记/index.html">
+<meta property="og:site_name" content="旺旺的Blog">
+<meta property="og:description" content="命令行
+ls -l  列车当前目录下所有内容
+pwd 显示当前目录名称
+who 显示当前用户名
+clear 清屏
+mkdir 新建一个目录
+touch 新建一个文件
+open 打开一个文件
+
+UIView
+frame CGRect 控件的位置及大小
+bounds CGRect 以自己的左上为xy，所以 xy为0
+tag Integer类型 ，标记
+superView 父类
+subViews 所有子">
+<meta property="og:updated_time" content="2015-01-02T09:22:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IOS 视频笔记">
+<meta name="twitter:description" content="命令行
+ls -l  列车当前目录下所有内容
+pwd 显示当前目录名称
+who 显示当前用户名
+clear 清屏
+mkdir 新建一个目录
+touch 新建一个文件
+open 打开一个文件
+
+UIView
+frame CGRect 控件的位置及大小
+bounds CGRect 以自己的左上为xy，所以 xy为0
+tag Integer类型 ，标记
+superView 父类
+subViews 所有子">
+
+    
+    <link rel="alternative" href="/atom.xml" title="旺旺的Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="旺旺的Blog" title="旺旺的Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="旺旺的Blog">旺旺的Blog</a></h1>
+				<h2 class="blog-motto">只有那些疯狂到以为自己可以改变世界的人，才能够真的改变世界。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:wangwanggame.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/09/14/ios/IOS-视频笔记/" title="IOS 视频笔记" itemprop="url">IOS 视频笔记</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="程序猿旺旺" target="_blank" itemprop="author">程序猿旺旺</a>
+		
+  <p class="article-time">
+    <time datetime="2014-09-14T08:49:33.000Z" itemprop="datePublished"> 发表于 Sep 14 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#命令行"><span class="toc-number">1.</span> <span class="toc-text">命令行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIView"><span class="toc-number">2.</span> <span class="toc-text">UIView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIButton"><span class="toc-number">3.</span> <span class="toc-text">UIButton</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITextfield"><span class="toc-number">4.</span> <span class="toc-text">UITextfield</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIToolbar"><span class="toc-number">5.</span> <span class="toc-text">UIToolbar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIImage"><span class="toc-number">6.</span> <span class="toc-text">UIImage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISlider"><span class="toc-number">7.</span> <span class="toc-text">UISlider</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#viewController"><span class="toc-number">8.</span> <span class="toc-text">viewController</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISegmentControl"><span class="toc-number">9.</span> <span class="toc-text">UISegmentControl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIScrollView"><span class="toc-number">10.</span> <span class="toc-text">UIScrollView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIPageControl-分页显示"><span class="toc-number">11.</span> <span class="toc-text">UIPageControl 分页显示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITableView"><span class="toc-number">12.</span> <span class="toc-text">UITableView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIAlertView"><span class="toc-number">13.</span> <span class="toc-text">UIAlertView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作表单"><span class="toc-number">14.</span> <span class="toc-text">操作表单</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#动画"><span class="toc-number">15.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#键盘"><span class="toc-number">16.</span> <span class="toc-text">键盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#plist-文件"><span class="toc-number">17.</span> <span class="toc-text">plist 文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xib"><span class="toc-number">18.</span> <span class="toc-text">xib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NSBundle"><span class="toc-number">19.</span> <span class="toc-text">NSBundle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xcode技巧"><span class="toc-number">20.</span> <span class="toc-text">xcode技巧</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#c，c-语言"><span class="toc-number">21.</span> <span class="toc-text">c，c++语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#block"><span class="toc-number">22.</span> <span class="toc-text">block</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#oc-语法"><span class="toc-number">23.</span> <span class="toc-text">oc 语法</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><ol>
+<li>ls -l  列车当前目录下所有内容</li>
+<li>pwd 显示当前目录名称</li>
+<li>who 显示当前用户名</li>
+<li>clear 清屏</li>
+<li>mkdir 新建一个目录</li>
+<li>touch 新建一个文件</li>
+<li>open 打开一个文件</li>
+</ol>
+<h1 id="UIView"><a href="#UIView" class="headerlink" title="UIView"></a>UIView</h1><ol>
+<li>frame CGRect 控件的位置及大小</li>
+<li>bounds CGRect 以自己的左上为xy，所以 xy为0</li>
+<li>tag Integer类型 ，标记</li>
+<li>superView 父类</li>
+<li>subViews 所有子类 只包括单层子控件</li>
+<li>view -&gt;Mode 设置显示模式（图片）</li>
+<li><code>UIView *last =[self.view.subviews lastObject]; [last removeFromSuperView];</code></li>
+<li>viewWithTag:  通过Tag获取子控件</li>
+<li>Drawing -&gt; opaque 选项，告诉系统是否绘制图片后面的view</li>
+<li>stretching -&gt; 图像拉伸</li>
+</ol>
+<h1 id="UIButton"><a href="#UIButton" class="headerlink" title="UIButton"></a>UIButton</h1><ol>
+<li>normal</li>
+<li>highlighted </li>
+<li>image 按钮显示的图片，按钮变化时不会跟随变化，background 会变化</li>
+<li>继承UIControl 的控件都可以监听点击事件</li>
+<li>代码创建 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">UIButton *btn =[[UIButton alloc]init];</div><div class="line">btn.frame =CGRectMake(0,0,100,100);</div><div class="line">[btn setBackgroundImage: [UIImage imageNamed:@&quot;btn.png&quot;] forState: UICOntrolStateNormal];</div><div class="line">[btn setTarget:self action:@selector(OnClick)]</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="UITextfield"><a href="#UITextfield" class="headerlink" title="UITextfield"></a>UITextfield</h1><ol>
+<li>font <code>field.font =[UIFont systemFontOfSize:30];</code></li>
+</ol>
+<h1 id="UIToolbar"><a href="#UIToolbar" class="headerlink" title="UIToolbar"></a>UIToolbar</h1><ol>
+<li>里面所有控件都是ButtonItem</li>
+</ol>
+<h1 id="UIImage"><a href="#UIImage" class="headerlink" title="UIImage"></a>UIImage</h1><ol>
+<li><code>[UIImage imageNamed:@&quot;&quot;];</code> //有缓存，需要设置image.frame 大小</li>
+<li><code>[[UIImage alloc]initWithCotentsOfFile:]</code> //用完释放</li>
+<li><code>[[UIImage alloc] initWithImage]</code> //默认设置图片大小</li>
+</ol>
+<h1 id="UISlider"><a href="#UISlider" class="headerlink" title="UISlider"></a>UISlider</h1><ol>
+<li>slider.on 开</li>
+</ol>
+<h1 id="viewController"><a href="#viewController" class="headerlink" title="viewController"></a>viewController</h1><ol>
+<li>self.view </li>
+</ol>
+<h1 id="UISegmentControl"><a href="#UISegmentControl" class="headerlink" title="UISegmentControl"></a>UISegmentControl</h1><ol>
+<li>分栏显示选择</li>
+</ol>
+<h1 id="UIScrollView"><a href="#UIScrollView" class="headerlink" title="UIScrollView"></a>UIScrollView</h1><ol>
+<li>scrollView.ContentSize; scrollview的大小</li>
+<li>showsHorizontalScrollIndicator =NO 隐藏水平滚动条。 </li>
+<li>scrollView.bounces =NO; //去掉弹簧效果</li>
+<li>scrollView.contentInset =UIEdgeInsetsMake();// 上左下右添加额外的滚动区域</li>
+<li>scrollView.contentOffset //现在显示的内容</li>
+<li>maximumZoomScale =2.0 //最大放大倍数</li>
+<li>minimumZoomScale = 0.2 //最小比例</li>
+<li>delegate //设置代理，需要实现<uiscrollviewdelegate>协议<ul>
+<li>ViewForZoomingScrollview:(UiScrollView * )scrollView //缩放</li>
+<li>scrollViewDidScroll:(UIScrollView * ) scrollView  //滑动时调用</li>
+<li>scrollViewDidEndZooming: //缩放结束</li>
+<li>scrollViewDidZoom //缩放时调用</li>
+<li></li>
+</ul>
+</uiscrollviewdelegate></li>
+<li>pagingEnabled =YES; //是否分页</li>
+</ol>
+<h1 id="UIPageControl-分页显示"><a href="#UIPageControl-分页显示" class="headerlink" title="UIPageControl 分页显示"></a>UIPageControl 分页显示</h1><ol>
+<li>numberOfPages //一共有多少页</li>
+<li>pageIndicatorTintColor //其它圆的颜色</li>
+<li>currentPageIndicatorTintColor //当前选中的颜色</li>
+<li>enable //自动跳页</li>
+</ol>
+<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><ol>
+<li>UITableviewStyl//ePlain 普通样式</li>
+<li>UITableviewStyleGrouped //分组样式</li>
+<li>实现接口 <uitableviewdatasource><ul>
+<li>tableView: numberOfRowsInSection: //某组有多少行</li>
+<li>tnumberOfSectionsInTableView: //一共多少组</li>
+<li>tableView:cellForRowAtIndexPath //返回每一行的内容</li>
+<li>tableView:titleForHeaderInSection: //头部标题</li>
+<li>tableView:titleForFooterInSection: //尾部标题</li>
+<li>tableView:didSelectRowAtIndexPath:</li>
+<li>sectionIndexTitlesForTableView ://索引条<ul>
+<li>拼音处理库 Pinyin4Objc Pinyin4j</li>
+</ul>
+</li>
+</ul>
+</uitableviewdatasource></li>
+<li>UITableViewCell <ul>
+<li>initWithStyle:</li>
+<li>detailTextLabel: 显示详情</li>
+<li>accessoryType: 设置最右边小图标</li>
+<li>accessoryView: 设置最右边显示什么控件</li>
+</ul>
+</li>
+<li><uitableviewdelegate> <ul>
+<li>tableView: heightForRowAtIndexPath: //设置行高</li>
+</ul>
+</uitableviewdelegate></li>
+<li>reloadData //重新加载数据<ul>
+<li>reloadRowsAtIndexPaths: </li>
+</ul>
+</li>
+</ol>
+<h1 id="UIAlertView"><a href="#UIAlertView" class="headerlink" title="UIAlertView"></a>UIAlertView</h1><ol>
+<li>ininWithTitle</li>
+<li>show</li>
+<li>[alert textFieldAtIndex:0] //文本框默认名称</li>
+<li>alertViewStayle </li>
+<li><uialertviewdelegate><ul>
+<li>alertView clickedButtonAtIndex //点击alert确定</li>
+</ul>
+</uialertviewdelegate></li>
+</ol>
+<h1 id="操作表单"><a href="#操作表单" class="headerlink" title="操作表单"></a>操作表单</h1><ol>
+<li><uiactionsheetdelegate> </uiactionsheetdelegate></li>
+<li></li>
+</ol>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><ol>
+<li>[ UIView beginAnimations:nil context:nil]; 一般参数填nil</li>
+<li>[ UIView commitAnimations] 提交动画，和beginAnimations中间的代码使用的动画。</li>
+<li>[ UIView setAnimationDuration:2.0] 动画时间</li>
+<li><code>CGAffineTransformMakeRotation(- M_PI_4);</code>  <code>CGAffineTransformRotation(sender.transform)</code>左旋转45度</li>
+<li><code>CGAffineTransformMakeScale();</code> 放大缩小</li>
+<li>给Transform赋值<code>CGAffineTransformIdentity</code> 恢复默认值</li>
+<li>帧动画<ul>
+<li><code>image.animationImages =@[@&quot;test1.jpg&quot;,@&quot;test2.jpg&quot;]</code>  //动画数组</li>
+<li><code>[image startAnimating];</code>  //开始播放动画</li>
+<li><code>image.animationDuration =0.1*count</code> //持续时间</li>
+<li><code>image.animationRepeatCount =1;</code> //播放次数</li>
+<li><code>isAnimation</code> //是否正在播放</li>
+</ul>
+</li>
+<li>UIView animateWithDuration: animations:^{…}]; //执行动画</li>
+<li>UIView animateWithDuration: animations:  completion: //动画完成调用某方法</li>
+</ol>
+<h1 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h1><ol>
+<li>[feild resignFirstResponder] //文本框 退出键盘</li>
+<li>[self.view endEditing:YES] //退出键盘</li>
+<li>inputView //自定义键盘</li>
+<li>inputAccessoryView //自定义键盘顶部工具条</li>
+<li>becomeFirtsResponder //变成第一响应者</li>
+</ol>
+<h1 id="plist-文件"><a href="#plist-文件" class="headerlink" title="plist 文件"></a>plist 文件</h1><ol>
+<li>创建 NewFile-&gt;Resource-&gt;Property List</li>
+<li><p>解析Plist </p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSBundle</span> *bundle = [<span class="built_in">NSBundle</span> mainBundle];</div><div class="line"><span class="built_in">NSString</span> *path =[<span class="built_in">NSArray</span> arrayWithContentsOfFile:];</div><div class="line"><span class="built_in">NSArray</span> *array =    [<span class="built_in">NSArrayWithContentsOfFile</span>:path];</div></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
+<h1 id="xib"><a href="#xib" class="headerlink" title="xib"></a>xib</h1><ol>
+<li><code>NSArray *view =[[NSBundle mainBundle] loadNibNamed:@&quot;&quot; owner:nil options:nil];</code></li>
+</ol>
+<h1 id="NSBundle"><a href="#NSBundle" class="headerlink" title="NSBundle"></a>NSBundle</h1><ol>
+<li><code>NSBundle *bundle = [NSBundle mainBundle]</code> //访问主要资源包</li>
+<li><code>NSString *path = [bundle pathForResource:@&quot;tom&quot; ofType:@&quot;plist&quot;];</code></li>
+<li><code>NSString *path =[NSArray arrayWithContentsOfFile:];</code></li>
+</ol>
+<h1 id="xcode技巧"><a href="#xcode技巧" class="headerlink" title="xcode技巧"></a>xcode技巧</h1><ol>
+<li>代码可以存为block，拖到右边的有 { } 的地方。</li>
+<li>Product-&gt;profile</li>
+<li>option+鼠标 实现多点触控</li>
+<li>&lt;#name#&gt; //代码段中设置要更改的地方</li>
+<li>#pragma mark //注释标记 </li>
+<li>#pragma mark - //添加分割线</li>
+<li>option +左键 函数说明</li>
+<li>esc代码提示</li>
+<li>移动行 cmd+option+{</li>
+<li>cmd +option +up //.h 和.m 文件切换</li>
+<li>右键 Structure -&gt; Re-Indent //代码自动格式整理</li>
+<li>esc代码提示，出题ctr+. ctr+shift+.前后翻页</li>
+<li>cmd +ctr+s 创建快照，存储在~/Library/Developer/Xcode/Snapshots</li>
+<li>cmd+shift+f Find is Workspace</li>
+<li>点击变量，右边出现小箭头 -&gt;Edit all in Scope  修改变量</li>
+<li>emacs快捷键<ul>
+<li>ctr +{F,B,P,N} //上下左右</li>
+<li>ctr +{A,E} //行首，行尾</li>
+<li>ctr +{T,D,K} //交换光标两端自负，删除右边字符,删除右边所有</li>
+<li>ctr +L //光标放到屏幕正中</li>
+</ul>
+</li>
+<li>cmd+shift+O 快速打开</li>
+<li>#pragma mark //添加信息</li>
+<li>option +双击 //打开文档</li>
+</ol>
+<h1 id="c，c-语言"><a href="#c，c-语言" class="headerlink" title="c，c++语言"></a>c，c++语言</h1><ol>
+<li><code>#define testNum 50</code> 可定义Num为50</li>
+<li>typedef 定义类型</li>
+<li>arc4random()%9   arc4random_uniform(9) 获取随机数</li>
+</ol>
+<h1 id="block"><a href="#block" class="headerlink" title="block"></a>block</h1><ol>
+<li><p>定义block变量<br>int (^sumBlock)(int, int);<br>void (^myBlock)();</p>
+</li>
+<li><p>如何利用block封装代码</p>
+ <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> ^(int a, int <span class="keyword">b) </span>&#123;</div><div class="line">     return a - <span class="keyword">b;</span></div><div class="line">&#125;<span class="comment">;</span></div><div class="line"></div><div class="line"> ^() &#123;</div><div class="line">     NSLog(@<span class="string">"----------"</span>)<span class="comment">;</span></div><div class="line">  &#125;<span class="comment">;</span></div><div class="line"></div><div class="line"> ^ &#123;</div><div class="line">     NSLog(@<span class="string">"----------"</span>)<span class="comment">;</span></div><div class="line">  &#125;<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>block访问外面变量</p>
+<ul>
+<li>block内部可以访问外面的变量</li>
+<li>默认情况下，block内部不能修改外面的局部变量</li>
+<li>给局部变量加上__block关键字，这个局部变量就可以在block内部修改</li>
+</ul>
+</li>
+<li>利用typedef定义block类型<ul>
+<li>typedef int (^MyBlock)(int, int);// 以后就可以利用MyBlock这种类型来定义block变量</li>
+<li>MyBlock block;</li>
+<li>MyBlock b1, b2;</li>
+</ul>
+</li>
+</ol>
+<h1 id="oc-语法"><a href="#oc-语法" class="headerlink" title="oc 语法"></a>oc 语法</h1><ol>
+<li>isKIndClass</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://wangwanggame.com/2014/09/14/ios/IOS-视频笔记/" data-title="IOS 视频笔记 | 旺旺的Blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/10/05/mac/Mac-安装Ruby环境/" title="Mac 安装Ruby环境">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Mac 安装Ruby环境</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/09/10/ios/Objctive-c-基础/"  title="Objective-c 基础教程 笔记">
+ <strong>下一篇：</strong><br/> 
+ <span>Objective-c 基础教程 笔记
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#命令行"><span class="toc-number">1.</span> <span class="toc-text">命令行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIView"><span class="toc-number">2.</span> <span class="toc-text">UIView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIButton"><span class="toc-number">3.</span> <span class="toc-text">UIButton</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITextfield"><span class="toc-number">4.</span> <span class="toc-text">UITextfield</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIToolbar"><span class="toc-number">5.</span> <span class="toc-text">UIToolbar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIImage"><span class="toc-number">6.</span> <span class="toc-text">UIImage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISlider"><span class="toc-number">7.</span> <span class="toc-text">UISlider</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#viewController"><span class="toc-number">8.</span> <span class="toc-text">viewController</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISegmentControl"><span class="toc-number">9.</span> <span class="toc-text">UISegmentControl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIScrollView"><span class="toc-number">10.</span> <span class="toc-text">UIScrollView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIPageControl-分页显示"><span class="toc-number">11.</span> <span class="toc-text">UIPageControl 分页显示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITableView"><span class="toc-number">12.</span> <span class="toc-text">UITableView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIAlertView"><span class="toc-number">13.</span> <span class="toc-text">UIAlertView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作表单"><span class="toc-number">14.</span> <span class="toc-text">操作表单</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#动画"><span class="toc-number">15.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#键盘"><span class="toc-number">16.</span> <span class="toc-text">键盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#plist-文件"><span class="toc-number">17.</span> <span class="toc-text">plist 文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xib"><span class="toc-number">18.</span> <span class="toc-text">xib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NSBundle"><span class="toc-number">19.</span> <span class="toc-text">NSBundle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xcode技巧"><span class="toc-number">20.</span> <span class="toc-text">xcode技巧</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#c，c-语言"><span class="toc-number">21.</span> <span class="toc-text">c，c++语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#block"><span class="toc-number">22.</span> <span class="toc-text">block</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#oc-语法"><span class="toc-number">23.</span> <span class="toc-text">oc 语法</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/PS/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Android-Wear/" title="Android Wear">Android Wear<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Atom/" title="Atom">Atom<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/蓝牙/BLE/" title="BLE">BLE<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Bluetooth/" title="Bluetooth">Bluetooth<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Eclipse/" title="Eclipse">Eclipse<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/PS/" title="PS">PS<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/SQLie/" title="SQLie">SQLie<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/SublimeText-3/" title="SublimeText 3">SublimeText 3<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Swift/" title="Swift">Swift<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Unity/" title="Unity">Unity<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Unity/UnityForAndroid/" title="UnityForAndroid">UnityForAndroid<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/VS-Code/" title="VS Code">VS Code<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/ant/" title="ant">ant<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/ps/" title="ps">ps<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/年终总结/" title="年终总结">年终总结<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/我/" title="我">我<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/稀奇古怪/" title="稀奇古怪">稀奇古怪<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程工具/" title="编程工具">编程工具<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程语言/" title="编程语言">编程语言<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/蓝牙/" title="蓝牙">蓝牙<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/" title="读书笔记">读书笔记<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读后感/" title="读后感">读后感<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Unity/" title="Unity">Unity<sup>16</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Unity插件/" title="Unity插件">Unity插件<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/swift/" title="swift">swift<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UMeng/" title="UMeng">UMeng<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/编程风格/" title="编程风格">编程风格<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PS/" title="PS">PS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/photoshop/" title="photoshop">photoshop<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ps/" title="ps">ps<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/业余爱好/" title="业余爱好">业余爱好<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/VSCode/" title="VSCode">VSCode<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/AI/" title="AI">AI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/2015/" title="2015">2015<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ppt/" title="ppt">ppt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/演示/" title="演示">演示<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是旺旺  <br/>
+			这是我的博客，不管你信不信</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="程序猿旺旺">程序猿旺旺</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

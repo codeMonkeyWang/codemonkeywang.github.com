@@ -1,0 +1,927 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>斯坦福IOS笔记 | 旺旺的Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="程序猿旺旺">
+    
+
+    
+    <meta name="description" content="IOS介绍
+MVC
+Model 
+View
+Controller
+
+
+outlet 视图输出
+IOS7 可使用 @import Foundation; 导入foundation
+@property
+@interface Card()  @end  加入私有声明
+strong 属性 在没有指针指向的时候立刻释放内存。weak 还会把指针设置为nil
+nonatomic 非原子性，可以多线程操作
+@s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="斯坦福IOS笔记">
+<meta property="og:url" content="http://wangwanggame.com/2014/09/08/ios/斯坦福IOS笔记/index.html">
+<meta property="og:site_name" content="旺旺的Blog">
+<meta property="og:description" content="IOS介绍
+MVC
+Model 
+View
+Controller
+
+
+outlet 视图输出
+IOS7 可使用 @import Foundation; 导入foundation
+@property
+@interface Card()  @end  加入私有声明
+strong 属性 在没有指针指向的时候立刻释放内存。weak 还会把指针设置为nil
+nonatomic 非原子性，可以多线程操作
+@s">
+<meta property="og:updated_time" content="2015-01-02T09:22:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="斯坦福IOS笔记">
+<meta name="twitter:description" content="IOS介绍
+MVC
+Model 
+View
+Controller
+
+
+outlet 视图输出
+IOS7 可使用 @import Foundation; 导入foundation
+@property
+@interface Card()  @end  加入私有声明
+strong 属性 在没有指针指向的时候立刻释放内存。weak 还会把指针设置为nil
+nonatomic 非原子性，可以多线程操作
+@s">
+
+    
+    <link rel="alternative" href="/atom.xml" title="旺旺的Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="旺旺的Blog" title="旺旺的Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="旺旺的Blog">旺旺的Blog</a></h1>
+				<h2 class="blog-motto">只有那些疯狂到以为自己可以改变世界的人，才能够真的改变世界。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:wangwanggame.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/09/08/ios/斯坦福IOS笔记/" title="斯坦福IOS笔记" itemprop="url">斯坦福IOS笔记</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="程序猿旺旺" target="_blank" itemprop="author">程序猿旺旺</a>
+		
+  <p class="article-time">
+    <time datetime="2014-09-08T07:07:15.000Z" itemprop="datePublished"> 发表于 Sep 8 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IOS介绍"><span class="toc-number">1.</span> <span class="toc-text">IOS介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#foundation"><span class="toc-number">2.</span> <span class="toc-text">foundation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#oc"><span class="toc-number">3.</span> <span class="toc-text">oc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#多个MVC"><span class="toc-number">3.1.</span> <span class="toc-text">多个MVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视图、绘制、手势识别"><span class="toc-number">3.2.</span> <span class="toc-text">视图、绘制、手势识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protocol"><span class="toc-number">3.3.</span> <span class="toc-text">Protocol</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动画"><span class="toc-number">3.3.1.</span> <span class="toc-text">动画</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="IOS介绍"><a href="#IOS介绍" class="headerlink" title="IOS介绍"></a>IOS介绍</h1><ol>
+<li>MVC<ul>
+<li>Model </li>
+<li>View</li>
+<li>Controller</li>
+</ul>
+</li>
+<li>outlet 视图输出</li>
+<li>IOS7 可使用 <code>@import Foundation;</code> 导入foundation</li>
+<li>@property<ul>
+<li>@interface Card()  @end  加入私有声明</li>
+<li>strong 属性 在没有指针指向的时候立刻释放内存。weak 还会把指针设置为nil</li>
+<li>nonatomic 非原子性，可以多线程操作</li>
+<li>@synthesize </li>
+<li>@property(getter =isChosen) BOOL chosen;</li>
+</ul>
+</li>
+</ol>
+<h1 id="foundation"><a href="#foundation" class="headerlink" title="foundation"></a>foundation</h1><ol>
+<li>NSMutableArray <ul>
+<li>addObject: 添加对象到末尾</li>
+</ul>
+</li>
+<li>惰性实例化，在个体getter 中判断数组为nil，再实例化数组</li>
+<li>arc4Random()  c函数库中获取整数</li>
+<li>NSUInteger 和unsigned int 类似，NSUInteger 在不同平台不同，iPhone5S下会是64位</li>
+<li>[@[“1”,”2”,”3”] containsObject:@”1”] 检测字符数是否包含在内。</li>
+<li>alloc 和init 方法要一起用，永远不要单独使用</li>
+<li>实例类型 instancetype IOS7 新特性</li>
+<li>Images.xcassets 存放图片资源</li>
+<li>UIImage 存储图像</li>
+<li>command+3 缩小模拟器</li>
+<li>cmd+shift+鼠标左 显示storyboard下的所有view</li>
+<li>cmd+ = 图像调整为实际大小</li>
+<li>调整图像按住option 可显示辅助线</li>
+</ol>
+<h1 id="oc"><a href="#oc" class="headerlink" title="oc"></a>oc</h1><ol>
+<li><code>CGPoint p =[obj getLocation];</code>返回值为 struct ，需要检验没有将它发送给nil</li>
+<li><p>动态绑定</p>
+<ul>
+<li>对象在运行时才确定要发送给什么类型的对象</li>
+<li>NSString * s =@”x”; </li>
+<li>id obj =s; //这完全合法，但是不安全 </li>
+<li>NSArray *a =obj; //完全合法，并且编译器不会报错</li>
+<li>绝对不要用id * ，id就是指针，这个指向指针的指针</li>
+<li>code  <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">Vehicle</span></span></div><div class="line">    - (<span class="keyword">void</span>) move;</div><div class="line"><span class="keyword">@end</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> :<span class="title">Vehicle</span></span></div><div class="line">- (<span class="keyword">void</span>)shoot; </div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line">Ship *s =[[Ship alloc]init]</div><div class="line">[s shoot];</div><div class="line">[s move];</div><div class="line"></div><div class="line">Vehicle *v =s;</div><div class="line">[v shoot] <span class="comment">//会警告，但是代码没问题</span></div><div class="line"></div><div class="line"><span class="keyword">id</span> obj =...;</div><div class="line">[obj shoot]; <span class="comment">//不会警告，代码有问题</span></div><div class="line">[obj sjdlfjlsdjfljsdlfj] <span class="comment">//编译器知道的任何类都没有该方法，就会警告</span></div><div class="line"></div><div class="line"><span class="built_in">NSString</span> * hello =<span class="string">@"hello"</span>;</div><div class="line">Ship * helloShip =(Ship *)hello;  <span class="comment">//不会警告，类型转换其实舍都没做，只是骗了编译器。</span></div><div class="line">[(<span class="keyword">id</span>)hello shoot]; <span class="comment">//不会警告，很危险</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>内省</p>
+<ul>
+<li>isKindOfClass   //是否是某个类</li>
+<li>isMemberOfClass //同上，不包括子类及其他类</li>
+<li>respondsToSelector  //是否对某一方法做出反应 @selector</li>
+<li>[obj performSelector:shootAtSelector withObject:coordinate]; //方法要么没对象，要么有一个对象作为参数</li>
+<li>[array makeObjectsPerformSelector:shootSelector]; //数组中所有对象执行该方法</li>
+</ul>
+</li>
+<li>Foundation<ul>
+<li>NSArray<ul>
+<li>将mutableArray 发送给copy 返回的是普通Array</li>
+<li>mutableCopy 返回的是mutable的类型，不论是什么对象调用的</li>
+<li>希望对象可以被copy ，需要自己实现</li>
+<li>数组中所有对象都是强指针</li>
+<li>sortedArrayUsingSelector:(SEL)selector; //根据SEL排序。</li>
+</ul>
+</li>
+<li>NSNumber<ul>
+<li>NSNumber *underline =@(NSUnderlineStyleSingle); //enum</li>
+<li>NSNumber *match =@([card match:@[otherCard]]);</li>
+</ul>
+</li>
+<li>NSSet/NSMutableSet //对象唯一 ，高效，查找快</li>
+<li>NSOrderedSet/NSMutableOrderedSet //有序集合</li>
+<li>NSDictionary<ul>
+<li>对象可以作为Key，但需要实现Hash和isequal.</li>
+</ul>
+</li>
+<li>属性列表 集合中只有集合类（array dictionary NSNumber NSString NSDate NSData），成为属性列表</li>
+<li>NSUserDefaults<ul>
+<li>setDouble: forKey:</li>
+<li>setObject: forKey: 等等</li>
+<li>synchronize 提交</li>
+</ul>
+</li>
+<li>NSRange<ul>
+<li>NSNotFound //返回范围为空（例如在数组中查找子字符串）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>UIKit<ul>
+<li>UIColor<ul>
+<li>有alpha属性 //0-1</li>
+</ul>
+</li>
+<li>UIFont<ul>
+<li>preferredFontForTextStyle //首选字体</li>
+<li>UIFontDescriptor //ios7 尝试将为一些字体添加粗体斜体等样式</li>
+</ul>
+</li>
+<li>NSAttributedString //不是String 的子类 ，为string添加描边，下划线等效果，该类是不可变的<ul>
+<li>string 方法</li>
+</ul>
+</li>
+<li>属性字典<br><code>@{ NSFontAttributeName : [UIFont preferredFontWithTextStyle:UIFontTextStyleHeadline] NSForegroundColorAttributeName :[UIColor blueColor],NSStrokeWidthAttributeName:@-5, //描边，负数表示填充并描边，正数描边空心
+NSStrokeColorAttributeName:[UIColor orangeColor]}</code> //描边颜色</li>
+<li>UIButtong UITextView  的setArrributedTitle 设置属性字典</li>
+<li>UILabel 有attributedText 属性 是只读的，只能创建可变副本，在设置回去</li>
+<li>UITextView<ul>
+<li>TextStorage; //NSMutableString 的子类<ul>
+<li><code>[self.body.textStorage addAttribute:NSForegroundAttributeName value:sender.backgroundColor range:self.body.selectedRange]</code> //设置选中的内容为触发按钮的背景色</li>
+<li><code>[self.body.textStorage addAttributes:@{NSStrokeWidthAttributedNmae:@-3 NSStrokeColorAttributeName:[UIColor redColor] range:self.body.selectedRange];</code> //设置描边</li>
+<li><code>[self.body.textStroke removeAttribute:NSStrokeWidthAttributName range:self.body.selectedRange];</code></li>
+</ul>
+</li>
+<li>可以创建一个限制区域，使文本环绕图片显示（TextKit）</li>
+</ul>
+</li>
+<li>Attributor 属性化字符串<ul>
+<li>selectable //可选择的</li>
+<li>editable //可编辑的</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ViewController <ul>
+<li>ViewDidLoad //适合init 只会调用一次 <ul>
+<li>不要添加任何视觉图形的初始化设置（这时图形未加载）</li>
+</ul>
+</li>
+<li>viewWillAppear: //view将要显示时调用，<ul>
+<li>不要在这里添加一次性初始化代码，多个mvc存在时可能会被多次调用。</li>
+<li>如果视图切到后台时一些数据发生变化，可以在这里重新加载</li>
+</ul>
+</li>
+<li>viewWillDisappear: //view将要退出显示，在这里释放资源</li>
+<li>viewDidAppear: &amp; viewDidDisappear: //view 已经完成某些操作时调用</li>
+<li>view{Will,Did}LayoutSubviews: //在屏幕横竖屏切换时，重新布局子控件时调用</li>
+<li>Autorotation //自动旋转</li>
+<li>didReceiveMemoryWarning //内存不足</li>
+<li>awakeFromNib //解析nib storyboard</li>
+<li>调用顺序<ul>
+<li>Instantiated</li>
+<li>awakeFromNib</li>
+<li>Outlets get set</li>
+<li>viewDidLoad</li>
+<li>ViewWillLayoutSubviews:</li>
+<li>viewWillAppear: adn viewdidAppear:</li>
+<li>viewWillLayoutSubviews: and viewDidLayoutSubviews:</li>
+<li>didReceiveMemoryWarning</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Notifications //广播<ul>
+<li>NSNotificationCenter<ul>
+<li><code>[NSNotificationCenter defaultCenter]</code> //返回单例</li>
+<li>addObserver:(id) observer //想要接收对象，一般为self<br>  selector:(SEL)  //执行的方法<br>  name:(NSString) //广播名称<br>  object:()sender; //表示只对某个对象发出的广播感兴趣</li>
+<li>方法接收notification对象<ul>
+<li>notification.name,notification.object,notification.userInfo</li>
+</ul>
+</li>
+<li><code>[center removeObserver:self]</code> <code>[center removeObserver:self name:UIContentSizeCategoryDidChangeNotification object:nil]</code><ul>
+<li>一定要移除广播，广播站会保留一个<code>不安全保留</code> 类型的指针,如果没有调用上边方法就离开堆，当系统向你发送广播时，你会崩溃。（ios6 以上改为了weak）</li>
+</ul>
+</li>
+<li>Unsafe retained //不安全保留,如果没有调用就离开了堆，通知中心会试着给你发送一个通知，程序会崩溃</li>
+<li>在MVC离开屏幕是，就应该移除广播 可以在dealloc中移除（其它情况不建议使用dealloc）</li>
+<li>UIContentSizeCategoryDidChangeNotification()  //字体设置改变的广播<h2 id="多个MVC"><a href="#多个MVC" class="headerlink" title="多个MVC"></a>多个MVC</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>UITabBarController //数组</li>
+<li><p>UINavigationController</p>
+<ul>
+<li>Havigation Bar 导航条<ul>
+<li>Title</li>
+<li>navigationItem.rightBarButtonItems</li>
+<li>Back Button</li>
+</ul>
+</li>
+<li>toolbarItems</li>
+<li>Contorller<ul>
+<li>UINavigationController // 自己的view</li>
+<li>rootViewController  // 指向另一个mvc</li>
+</ul>
+</li>
+<li>Segues<ul>
+<li>用来从一个mvc跳到另一个</li>
+<li>model push custom</li>
+<li>Editor -&gt; Embe In -&gt; Navigation Controller</li>
+</ul>
+</li>
+<li>[self.navigationController popViewControllerAnimated]</li>
+<li><p>prepareForSegue //在awakeFromNib 和viewDidLoad 之间调用</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-(void) prepareForSegue:(<span class="type">UIStoryboardSegue</span> *)segue sender:(id)sender:&#123;</div><div class="line">    <span class="keyword">if</span>([segue.identifier isEqualToString :@<span class="string">"DoSomething"</span>])&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>if(self.view.window) [self updateUI]; //如果我在屏幕上才更新UI</p>
+<h2 id="视图、绘制、手势识别"><a href="#视图、绘制、手势识别" class="headerlink" title="视图、绘制、手势识别"></a>视图、绘制、手势识别</h2></li>
+</ul>
+</li>
+<li>Views<ul>
+<li>addSubview:(UIView *)aView</li>
+<li>removeFromSuperview;</li>
+<li>self.view 是顶级视图</li>
+<li>设置UIView 为透明 //性能开销很大<ul>
+<li>opaque = NO //透明</li>
+<li>alpha</li>
+</ul>
+</li>
+<li>实现 方法 drawRect:(CGRect) aRect;//不要调用，留给系统调用的<ul>
+<li>使用<code>- setNeedDisplay;</code></li>
+<li>系统使用Core Graphics实现</li>
+</ul>
+</li>
+<li>UIBezierPath 绘制图形</li>
+<li><code>CGContextRef context = UIGraphicsGetCurrentContext();</code> //获取系统上下文，是个无类型的指针</li>
+</ul>
+</li>
+<li>UIGestureRecognizer //手势识别<ul>
+<li>UIPanGestureRecognizer<ul>
+<li>(CGPoint)translationInView:(UIView *) aView; //触摸移动距离</li>
+<li>(CGPoint)velocityInView:(UIView *) aView; //移动速度</li>
+<li>(void)setTranslation:(CGPoint)translation inView:(UIView **)aView //对移动距离重置</li>
+<li>要注意Failed 和 Canceled 的手势状态<h2 id="Protocol"><a href="#Protocol" class="headerlink" title="Protocol"></a>Protocol</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>id&lt;foo&gt;</code> 编译器不会因为添加协议，编译的代码就会发生改变</li>
+<li>每次向block中的对象发送消息时，系统会创建一个指向该对象的强指针</li>
+<li>block<ul>
+<li><code>__weak MyClass *weakSelf = self</code> //block中引用此指针，解决强引用环</li>
+</ul>
+</li>
+</ul>
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><ul>
+<li>Core animation</li>
+<li>添加动画<ul>
+<li>frame</li>
+<li>transform</li>
+<li>alpha</li>
+</ul>
+</li>
+<li><p>animateWithDuration:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[<span class="type">UIView</span> animatwWithDuration:<span class="number">3.0</span></div><div class="line">                delay:<span class="number">0.0</span></div><div class="line">                options:<span class="type">UIViewAnimationOptionBeginFromCurrentState</span></div><div class="line">                animations:^&#123;myView.alpha = <span class="number">0.0</span>;&#125;</div><div class="line">                completion:^(<span class="type">BOOL</span> fin)&#123;<span class="keyword">if</span> (fin)[myView removeFromsuperview]&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Dynamic animation</p>
+</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://wangwanggame.com/2014/09/08/ios/斯坦福IOS笔记/" data-title="斯坦福IOS笔记 | 旺旺的Blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/09/10/ios/Objctive-c-基础/" title="Objective-c 基础教程 笔记">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Objective-c 基础教程 笔记</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/07/24/编程工具/sublime-Text-3使用技巧/"  title="sublime Text 3使用技巧">
+ <strong>下一篇：</strong><br/> 
+ <span>sublime Text 3使用技巧
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IOS介绍"><span class="toc-number">1.</span> <span class="toc-text">IOS介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#foundation"><span class="toc-number">2.</span> <span class="toc-text">foundation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#oc"><span class="toc-number">3.</span> <span class="toc-text">oc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#多个MVC"><span class="toc-number">3.1.</span> <span class="toc-text">多个MVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视图、绘制、手势识别"><span class="toc-number">3.2.</span> <span class="toc-text">视图、绘制、手势识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protocol"><span class="toc-number">3.3.</span> <span class="toc-text">Protocol</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动画"><span class="toc-number">3.3.1.</span> <span class="toc-text">动画</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/PS/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Android-Wear/" title="Android Wear">Android Wear<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Atom/" title="Atom">Atom<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/蓝牙/BLE/" title="BLE">BLE<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Bluetooth/" title="Bluetooth">Bluetooth<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Eclipse/" title="Eclipse">Eclipse<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/PS/" title="PS">PS<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/SQLie/" title="SQLie">SQLie<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/SublimeText-3/" title="SublimeText 3">SublimeText 3<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Swift/" title="Swift">Swift<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Unity/" title="Unity">Unity<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Unity/UnityForAndroid/" title="UnityForAndroid">UnityForAndroid<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/VS-Code/" title="VS Code">VS Code<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/ant/" title="ant">ant<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/ps/" title="ps">ps<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/年终总结/" title="年终总结">年终总结<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/我/" title="我">我<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/稀奇古怪/" title="稀奇古怪">稀奇古怪<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程工具/" title="编程工具">编程工具<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程语言/" title="编程语言">编程语言<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/蓝牙/" title="蓝牙">蓝牙<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/" title="读书笔记">读书笔记<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读后感/" title="读后感">读后感<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Unity/" title="Unity">Unity<sup>16</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Unity插件/" title="Unity插件">Unity插件<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/swift/" title="swift">swift<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UMeng/" title="UMeng">UMeng<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/编程风格/" title="编程风格">编程风格<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PS/" title="PS">PS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/photoshop/" title="photoshop">photoshop<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ps/" title="ps">ps<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/业余爱好/" title="业余爱好">业余爱好<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/VSCode/" title="VSCode">VSCode<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/AI/" title="AI">AI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/2015/" title="2015">2015<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ppt/" title="ppt">ppt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/演示/" title="演示">演示<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是旺旺  <br/>
+			这是我的博客，不管你信不信</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="程序猿旺旺">程序猿旺旺</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

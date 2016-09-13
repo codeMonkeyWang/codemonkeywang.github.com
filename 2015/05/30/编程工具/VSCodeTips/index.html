@@ -1,0 +1,829 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Visual Studio Code | 旺旺的Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="程序猿旺旺">
+    
+
+    
+    <meta name="description" content="微软最近发布了一个跨平台代码编辑器Visual Studio Code(以下称VSCode)，使用了几天，感觉还不错。写篇博客记录一下。我使用mac电脑，所以这里的按键都以mac为标准
+
+1. 安装及配置
+安装直接去官网下载，不解释。  
+
+在命令行调用VSCode
+设置
+
+在.bash_profile中添加               
+code () {
+    if [[ $# = 0 ]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visual Studio Code">
+<meta property="og:url" content="http://wangwanggame.com/2015/05/30/编程工具/VSCodeTips/index.html">
+<meta property="og:site_name" content="旺旺的Blog">
+<meta property="og:description" content="微软最近发布了一个跨平台代码编辑器Visual Studio Code(以下称VSCode)，使用了几天，感觉还不错。写篇博客记录一下。我使用mac电脑，所以这里的按键都以mac为标准
+
+1. 安装及配置
+安装直接去官网下载，不解释。  
+
+在命令行调用VSCode
+设置
+
+在.bash_profile中添加               
+code () {
+    if [[ $# = 0 ]">
+<meta property="og:updated_time" content="2015-06-03T11:34:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Visual Studio Code">
+<meta name="twitter:description" content="微软最近发布了一个跨平台代码编辑器Visual Studio Code(以下称VSCode)，使用了几天，感觉还不错。写篇博客记录一下。我使用mac电脑，所以这里的按键都以mac为标准
+
+1. 安装及配置
+安装直接去官网下载，不解释。  
+
+在命令行调用VSCode
+设置
+
+在.bash_profile中添加               
+code () {
+    if [[ $# = 0 ]">
+
+    
+    <link rel="alternative" href="/atom.xml" title="旺旺的Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="旺旺的Blog" title="旺旺的Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="旺旺的Blog">旺旺的Blog</a></h1>
+				<h2 class="blog-motto">只有那些疯狂到以为自己可以改变世界的人，才能够真的改变世界。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:wangwanggame.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/05/30/编程工具/VSCodeTips/" title="Visual Studio Code" itemprop="url">Visual Studio Code</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="程序猿旺旺" target="_blank" itemprop="author">程序猿旺旺</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-30T08:57:47.000Z" itemprop="datePublished"> 发表于 May 30 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装及配置"><span class="toc-number">1.</span> <span class="toc-text">1. 安装及配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在命令行调用VSCode"><span class="toc-number">1.1.</span> <span class="toc-text">在命令行调用VSCode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.2.</span> <span class="toc-text">配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-文件操作"><span class="toc-number">2.</span> <span class="toc-text">2.文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视图"><span class="toc-number">3.</span> <span class="toc-text">视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制"><span class="toc-number">4.</span> <span class="toc-text">版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unity3D相关"><span class="toc-number">5.</span> <span class="toc-text">Unity3D相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#过滤多余的文件"><span class="toc-number">5.1.</span> <span class="toc-text">过滤多余的文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用快捷键"><span class="toc-number">6.</span> <span class="toc-text">常用快捷键</span></a></li></ol>
+		
+		</div>
+		
+		<blockquote>
+<p>微软最近发布了一个跨平台代码编辑器Visual Studio Code(以下称VSCode)，使用了几天，感觉还不错。写篇博客记录一下。<br>我使用mac电脑，所以这里的按键都以mac为标准</p>
+</blockquote>
+<h2 id="1-安装及配置"><a href="#1-安装及配置" class="headerlink" title="1. 安装及配置"></a>1. 安装及配置</h2><blockquote>
+<p>安装直接去官网下载，不解释。  </p>
+</blockquote>
+<h3 id="在命令行调用VSCode"><a href="#在命令行调用VSCode" class="headerlink" title="在命令行调用VSCode"></a>在命令行调用VSCode</h3><ul>
+<li><p>设置</p>
+<ol>
+<li><p>在<code>.bash_profile</code>中添加               </p>
+<pre><code class="profile">code (<span class="string">) {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] &amp;&amp; F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}</span>
+</code></pre>
+</li>
+<li><p>执行<code>source .bash_profile</code><br><a href="http://blog.csdn.net/edai9508/article/details/6006269" target="_blank" rel="external">参考</a></p>
+</li>
+</ol>
+</li>
+<li><p>调用 </p>
+<ul>
+<li>使用<code>code</code>命令   </li>
+<li><code>code .</code> 打开当前文件夹</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul>
+<li>在json配置文件 鼠标指向key 会自动弹出提示（可以所代表的功能）</li>
+</ul>
+<h2 id="2-文件操作"><a href="#2-文件操作" class="headerlink" title="2.文件操作"></a>2.文件操作</h2><blockquote>
+<p>VSCode最多可同时并排显示三个文件。</p>
+</blockquote>
+<ul>
+<li>分栏编辑<ul>
+<li><code>cmd</code>点击文件</li>
+<li><code>cmd + \</code> 分两栏打开文件</li>
+<li>右键 -&gt; Open to the Side</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>shift+cmd+P</code> 可以打开所有命令</li>
+<li><code>cmd+O</code> 通过文件列表打开文件。</li>
+<li><code>ctrl + tab</code> 在已经打开的文件之间切换（类似<code>cmd +tab</code>切换应用）</li>
+<li><code>ctrl + G</code> 跳转到输入的行数</li>
+<li><code>shift+cmd+O</code> 打开一个文件的所有属性和方法列表。<ul>
+<li>键入<code>：</code>可以分类浏览属性和方法</li>
+</ul>
+</li>
+<li><code>⌘T</code>通过一个名称打开一个方法或属性（可以跨文件）</li>
+<li><p><code>？</code> 可以打开特殊符号的列表</p>
+</li>
+<li><p>代码格式化</p>
+<ul>
+<li>右键-&gt; format Code</li>
+</ul>
+</li>
+<li><p>括号匹配</p>
+<ul>
+<li><code>⌥⌘]</code> 跳转到匹配的括号。</li>
+</ul>
+</li>
+<li><p>多光标</p>
+<ul>
+<li>按住<code>Alt</code>点击，可以产生多个光标</li>
+<li><code>⌥⌘↓``⌥⌘↑</code> 向下和向下选择一行。</li>
+<li><code>⇧⌘L</code> 选中文件中出现的某单词的所有位置。</li>
+</ul>
+</li>
+<li>自动提示<ul>
+<li><code>editor.quickSuggestions</code> <code>editor.suggestOnTriggerCharacters</code> 配置7x24 智能提示</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>保存<ul>
+<li>自动保存  <code>⇧⌘P</code>, 输入auto 可以打开或关闭自动保存。</li>
+</ul>
+</li>
+<li><p>搜索</p>
+<ul>
+<li><code>⇧⌘F</code> 可全局搜索（支持正则表达式）</li>
+<li><code>⇧⌘J</code> 打开或关闭高级搜索选项。</li>
+<li>右键 <code>find in folder</code>可以选择只在某文件夹搜索。</li>
+</ul>
+</li>
+<li><p>转到定义</p>
+<ul>
+<li>Ctrl 鼠标悬停预览，点击可以跳转。</li>
+<li><code>Ctrl + Alt +点击</code> 可以另外分出一栏打开定义。</li>
+</ul>
+</li>
+<li><p>peek<br>  *<code>option + F12</code>    可以通过预览窗口打开定义，点击标题文件名可以直接打开文件。</p>
+</li>
+<li><p>被引用次数</p>
+<ul>
+<li><code>editor.referenceInfos</code>可以打开或关闭</li>
+</ul>
+</li>
+<li><p>重命名 属性</p>
+<ul>
+<li>按下F2可以重命名。</li>
+</ul>
+</li>
+<li><p>错误和警告</p>
+<ul>
+<li><code>F8``⇧F8</code> 循环显示一个文件中的错误和警告</li>
+</ul>
+</li>
+</ul>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><ul>
+<li><code>cmd + B</code> 隐藏或显示侧边栏</li>
+</ul>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><ul>
+<li><p>文件变动指示器</p>
+<ul>
+<li>红色箭头表示被删除的行</li>
+<li>绿色竖线表示被添加的行</li>
+<li>蓝色竖线表示被修改的行</li>
+</ul>
+</li>
+<li><p>文件比较</p>
+<ol>
+<li>在左侧，右键文件select to compare，然后再右键一个文件Compare with ‘xx’，就可以出现diff。</li>
+<li>git的模式下，点击右上角的switch to changes file，就可以启动diff。</li>
+</ol>
+</li>
+</ul>
+<h2 id="Unity3D相关"><a href="#Unity3D相关" class="headerlink" title="Unity3D相关"></a>Unity3D相关</h2><h3 id="过滤多余的文件"><a href="#过滤多余的文件" class="headerlink" title="过滤多余的文件"></a>过滤多余的文件</h3><ul>
+<li>设置Setting<ul>
+<li>Windows %APPDATA%\Code\User\settings.json</li>
+<li>Mac $HOME/Library/Application Support/Code/User/settings.json(<a href="https://code.visualstudio.com/Docs/customization" target="_blank" rel="external">官网</a>提供的路径不对)</li>
+<li>Linux $HOME/.config/Code/User/settings.json</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://sowhere.me/blog/2015/04/30/why-vscode/" target="_blank" rel="external">VSCode文档中文翻译</a></p>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
+<li><code>⌘X</code>    剪切行</li>
+<li><code>⌘C</code> 复制行</li>
+<li><code>⇧⌘K</code> 删除行</li>
+<li><code>⌘Enter</code> 下面添加行</li>
+<li><code>⇧⌘Enter</code> 上面添加行</li>
+<li><code>⌥↓</code> <code>⌥↑</code> 移动行</li>
+<li><code>⇧⌥↓</code> <code>⇧⌥↑</code> 复制行</li>
+<li><code>cmd + 2</code> 分割窗口打开文件</li>
+<li><code>⌥⌘↓``⌥⌘↑</code> 向上或向下一行添加光标</li>
+<li><code>⌥⌘]</code> 跳转到匹配括号</li>
+<li><code>⌘]</code> <code>⌘[</code> 添加或删除缩进</li>
+<li><code>⌘←``⌘→</code> 跳转到行首或行尾</li>
+<li><code>⌘/</code> 注释行</li>
+<li><code>⇧⌥A</code> 注释块</li>
+<li><code>⌘F</code> 发现</li>
+<li><code>⌥⌘F</code> 更换</li>
+<li><code>⌘G</code> 查找下一个</li>
+<li><code>⇧⌘G</code> 查找上一个</li>
+<li><code>⌥⌘F</code> 格式化代码</li>
+<li><code>⌘1``⌘2``⌘3</code> 聚焦到左边中间或右边的编辑窗口</li>
+<li><code>⌥⌘←</code> <code>⌥⌘→</code> 向左或向右切换编辑器</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://wangwanggame.com/2015/05/30/编程工具/VSCodeTips/" data-title="Visual Studio Code | 旺旺的Blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/10/28/unity/Unity-ugui使点击事件穿透到下层/" title="Unity ugui使点击事件穿透到下层">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Unity ugui使点击事件穿透到下层</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/03/27/mac/mac读取NTFS格式分区（不使用第三方软件）/"  title="mac读取NTFS格式分区（不使用第三方软件）">
+ <strong>下一篇：</strong><br/> 
+ <span>mac读取NTFS格式分区（不使用第三方软件）
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装及配置"><span class="toc-number">1.</span> <span class="toc-text">1. 安装及配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在命令行调用VSCode"><span class="toc-number">1.1.</span> <span class="toc-text">在命令行调用VSCode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">1.2.</span> <span class="toc-text">配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-文件操作"><span class="toc-number">2.</span> <span class="toc-text">2.文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视图"><span class="toc-number">3.</span> <span class="toc-text">视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制"><span class="toc-number">4.</span> <span class="toc-text">版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unity3D相关"><span class="toc-number">5.</span> <span class="toc-text">Unity3D相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#过滤多余的文件"><span class="toc-number">5.1.</span> <span class="toc-text">过滤多余的文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用快捷键"><span class="toc-number">6.</span> <span class="toc-text">常用快捷键</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/PS/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Android-Wear/" title="Android Wear">Android Wear<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Atom/" title="Atom">Atom<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/蓝牙/BLE/" title="BLE">BLE<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/Bluetooth/" title="Bluetooth">Bluetooth<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Eclipse/" title="Eclipse">Eclipse<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/PS/" title="PS">PS<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Android/SQLie/" title="SQLie">SQLie<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/SublimeText-3/" title="SublimeText 3">SublimeText 3<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Swift/" title="Swift">Swift<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Unity/" title="Unity">Unity<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Unity/UnityForAndroid/" title="UnityForAndroid">UnityForAndroid<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/VS-Code/" title="VS Code">VS Code<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/ant/" title="ant">ant<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/ps/" title="ps">ps<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/年终总结/" title="年终总结">年终总结<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/我/" title="我">我<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/稀奇古怪/" title="稀奇古怪">稀奇古怪<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程工具/" title="编程工具">编程工具<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/编程语言/" title="编程语言">编程语言<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/蓝牙/" title="蓝牙">蓝牙<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/" title="读书笔记">读书笔记<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读后感/" title="读后感">读后感<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Unity/" title="Unity">Unity<sup>16</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Unity插件/" title="Unity插件">Unity插件<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/swift/" title="swift">swift<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UMeng/" title="UMeng">UMeng<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/编程风格/" title="编程风格">编程风格<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PS/" title="PS">PS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adobe/" title="Adobe">Adobe<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/photoshop/" title="photoshop">photoshop<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ps/" title="ps">ps<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/业余爱好/" title="业余爱好">业余爱好<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/VSCode/" title="VSCode">VSCode<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/AI/" title="AI">AI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/2015/" title="2015">2015<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ppt/" title="ppt">ppt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/演示/" title="演示">演示<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是旺旺  <br/>
+			这是我的博客，不管你信不信</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="程序猿旺旺">程序猿旺旺</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
