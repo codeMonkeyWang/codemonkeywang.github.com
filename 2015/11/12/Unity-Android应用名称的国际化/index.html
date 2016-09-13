@@ -121,7 +121,7 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 <ul>
 <li>对于ios项目可以在Xcode的里面设置，但如果是Android项目要怎么办呢？<br>一个比较方便的方法是，在Unity<code>Plugins/Android/res/values-xx</code>文件夹（xx是对应的语言，<code>zh</code>是中文，<code>en</code>是英文），然后建立<code>strings.xml</code>文件。<br><img src="/img/appNameI18n-2.png" alt="设置app名称"><br>文件内容是：</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">"app_name"</span>&gt;</span>应用名称<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">"app_name"</span>&gt;</span>应用名称<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><strong>有一点需要说明的是：<code>value</code>文件夹代表默认的语言，找不到特定的语言<br>的文件夹，app的名称就会采用这个文件夹的<code>app_name</code>。<br>这个文件夹中的<code>strings.xml</code>的<code>app_name</code>属性中的文字会被替换为在Unity的player Setting中设置的<code>Product Name</code>。</strong></p>
 <ul>
 <li>如果你只做中文和英文的名称国际化，只需要添加<code>value-zh</code>文件夹，然后再<code>Product Name</code>中设置英文名称就可以了。</li>
@@ -246,6 +246,8 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 		  
 		
 		  
+		
+		  
 			<li><a href="/categories/MOOC/" title="MOOC">MOOC<sup>3</sup></a></li>
 		  
 		
@@ -286,6 +288,8 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 		  
 		
 		  
+		
+		  
 			<li><a href="/categories/ps/" title="ps">ps<sup>1</sup></a></li>
 		  
 		
@@ -311,6 +315,8 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 		
 		  
 			<li><a href="/categories/蓝牙/" title="蓝牙">蓝牙<sup>1</sup></a></li>
+		  
+		
 		  
 		
 		  
@@ -347,11 +353,11 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 			
 		
 			
-				<li><a href="/tags/swift/" title="swift">swift<sup>3</sup></a></li>
+				<li><a href="/tags/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Android黑科技/" title="Android黑科技">Android黑科技<sup>3</sup></a></li>
+				<li><a href="/tags/swift/" title="swift">swift<sup>3</sup></a></li>
 			
 		
 			
@@ -367,7 +373,7 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 			
 		
 			
-				<li><a href="/tags/学习/" title="学习">学习<sup>1</sup></a></li>
+				<li><a href="/tags/mac-技巧/" title="mac 技巧">mac 技巧<sup>1</sup></a></li>
 			
 		
 			
@@ -391,11 +397,15 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 			
 		
 			
+				<li><a href="/tags/VSCode/" title="VSCode">VSCode<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/AI/" title="AI">AI<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/VSCode/" title="VSCode">VSCode<sup>1</sup></a></li>
+				<li><a href="/tags/2015/" title="2015">2015<sup>1</sup></a></li>
 			
 		
 			
@@ -404,10 +414,6 @@ Unity 的国际化有很多插件支持，其中我最喜欢I2 Localization，�
 		
 			
 				<li><a href="/tags/演示/" title="演示">演示<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/2015/" title="2015">2015<sup>1</sup></a></li>
 			
 		
 		</ul>
